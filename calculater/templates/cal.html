@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cal page</title>
+</head>
+<body>
+<form method="POST" action="/calculater/result">
+    {% csrf_token % %}
+    no1<input type="number" name="valueA" required>
+    no2<input type="number" name="valueB" required>
+    <br>
+    <label for="op">
+    <br>
+    <input id="A" type="radio" name="op" value="A">plus
+    <input id="B" type="radio" name="op" value="B">multiple
+    <input id="C" type="radio" name="op" value="C">divide
+    <input id="D" type="radio" name="op" value="D">sub<!--选择计算-->
+    </label>
+    <br>
+    <button type="submit">operate</button>
+</form>
+<a href="http://127.0.0.1:8000/calculater/">main</a>
+<br>
+</body>
+</html>
